@@ -436,8 +436,10 @@ def main( argv=None ):
 		print( 'Filename:\t', os.path.basename( i ), sep=str() )
 		if 'title' in tag:
 			print( 'Title:\t\t', tag['title'], sep=str() )
-		if 'artist' in tas:
+		if 'artist' in tag:
 			print( 'Artist:\t\t', tag['artist'], sep=str() )
+		if 'album' in tag:
+			print( 'Album:\t\t', tag['album'], sep=str() )
 		if 'track' in tag:
 			print( 'Track#:\t\t', tag['track'], sep=str() )
 		if 'disc' in tag:
@@ -447,7 +449,7 @@ def main( argv=None ):
 		if 'year' in tag:
 			print( 'Year:\t\t', tag['year'], sep=str() )
 		if 'comment' in tag:
-			print( 'Comment:\t\t', tag['comment'], sep=str() )
+			print( 'Comment:\t', tag['comment'], sep=str() )
 		if 'timestamp' in tag:
 			print( 'Timestamp:\t', tag['timestamp'], sep=str() )
 		print( 'Cover:\t\t', 'cover' in tag, sep=str() )
@@ -458,3 +460,5 @@ def main( argv=None ):
 
 if __name__ == '__main__':
 	sys.exit( main() )
+
+# vim: ts=4:sw=4:noet:si
